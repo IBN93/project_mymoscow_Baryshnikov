@@ -1,0 +1,58 @@
+body {
+    background: rgba(151, 129, 129, 0.26);
+}
+
+form {
+    border: 1px rgb(197, 197, 197) solid;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 25px;
+    color: rgb(133, 89, 95);
+}
+
+img {
+    height: 50px;
+}
+
+.container-with-icon {
+    margin: 25px 0;
+}
+
+.sidebar {
+    border-right: 1px rgb(197, 197, 197) solid;
+}
+
+.sidebar-icon {
+    margin: 15px 0 0 0;
+}
+
+.navbar-nav-margin {
+    margin-top: 0;
+}
+
+.admin-name {
+    cursor: unset;
+}
+
+.bg-milky {
+    background: rgb(247, 248, 228);
+}
+
+.card {
+    overflow: auto;
+}
+
+.sign {
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+.text-light-grey {
+    color: rgb(60, 138, 65);
+}

@@ -1,0 +1,983 @@
+$logo-font-color: rgb(255, 203, 0);
+$logo-font: 'Marck Script', cursive;
+$standard-padding: 40px;
+
+@mixin flex ($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin icons() {
+    padding: 23px;
+    float: left;
+    margin-right: 20px;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes falling {
+    50% {
+        left: 50%;
+        top: 50%;
+        opacity: 0.5;
+    }
+
+    100% {
+        left: 12%;
+        top: 75%;
+        opacity: 0;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(253, 255, 228);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.blackStripe {
+    background: black;
+    height: 400px;
+}
+
+.trip-stripe {
+    background: rgb(137, 141, 142);
+    height: 400px;
+}
+
+.contacts-stripe {
+    background: linear-gradient(to right, rgb(26, 100, 129), rgb(60, 115, 136));
+    background-color: black;
+    height: 400px;
+}
+
+header {
+    background: url(photos/nightmoscow.jpg) left top / cover no-repeat;
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    z-index: 999;
+    position: relative;
+    align-items: center;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 2px;
+        background-color: mintcream;
+        border-radius: 50%;
+        left: 18%;
+        top: 45%;
+        animation: twinkling 2s ease infinite;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 2px;
+        background-color: mintcream;
+        border-radius: 50%;
+        left: 86%;
+        top: 20%;
+        animation: falling 1.5s linear infinite;
+    }
+}
+
+.trips {
+    background: url(photos/trips.jpg) left top / cover no-repeat;
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    z-index: 999;
+    position: relative;
+    align-items: center;
+}
+
+.contacts-page-header {
+    background: url(photos/contacts.jpg) left top / cover no-repeat;
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    z-index: 999;
+    position: relative;
+    align-items: center;
+}
+
+.header-center {
+    width: 50%;
+    position: absolute;
+    color: white;
+    left: 0;
+    right: 0;
+    top: 33%;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    opacity: 0.9;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+    padding-bottom: 5px;
+}
+
+.mymoscow {
+    font-family: $logo-font;
+    font-size: 36px;
+}
+
+.stripe {
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    @include flex(space-between, center);
+    padding: 0 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.stripe-button {
+    display: block;
+    width: 140px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background: rgba(52, 95, 235, 0.521);
+    position: absolute;
+    bottom: 3%;
+    border-radius: 5px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    &:hover {
+        color: $logo-font-color;
+    }
+}
+
+.menu-button {
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+    display: none;
+    div {
+        background: white;
+        width: 30px;
+        height: 2px;
+        margin-bottom: 6px;
+    }
+}
+
+.sliding-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(61, 60, 60, 0.404);
+}
+
+.vertical-menu-items {
+    display: block; 
+    padding-bottom: 5px;
+}
+
+.logo {
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 8px;
+}
+
+.brand {
+    color: $logo-font-color;
+    font-family: $logo-font;
+    font-size: 28px;
+}
+
+.brand-2 {
+    font-family: $logo-font;
+    font-size: 16px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(106, 191, 245);
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+.what-We-Offer {
+    padding: $standard-padding;
+}
+
+.offer {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: $standard-padding;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 14px;
+    color: grey;
+}
+
+.flex {
+    display: flex;
+    text-align: left;
+    padding-bottom: $standard-padding;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 $standard-padding;
+    @include flex(left, initial);
+    &:hover {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+.icon {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.who-We-Are,
+.trip-type {
+    background: rgb(255, 192, 19);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.who-We-Are-photo {
+    background: url(photos/group.jpg) center center / cover no-repeat;
+    width: 50%;
+}
+
+.moscow-city {
+    background: url(photos/moscow-city.jpg) center center / cover no-repeat;
+    width: 50%;
+}
+
+.stalin-house {
+    background: url(photos/stalin-house.jpg) 40% center / cover no-repeat;
+    width: 50%;
+}
+
+.bulgakov {
+    background: url(photos/bulgakov.jpg) center center / cover no-repeat;
+    width: 50%;
+}
+
+.metro {
+    background: url(photos/metro.jpg) center center / cover no-repeat;
+    width: 50%;
+}
+
+.content {
+    color: white;
+    width: 50%;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: $standard-padding;
+}
+
+.content-title {
+    margin-bottom: 20px;
+    color: white;
+    text-align: left;
+    line-height: 20px;
+}
+
+.price {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.button {
+    background: rgb(255, 166, 0);
+    border: 4px groove rgb(255, 166, 0);
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        border-style: inset;
+    }
+}
+
+.button-right-align {
+    text-align: right;
+}
+
+/* Information block */
+
+.information {
+    padding: $standard-padding $standard-padding 0 $standard-padding;
+}
+
+.information-title {
+    padding-bottom: $standard-padding;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 200px;
+        background: orange;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 20px;
+    }
+}
+
+.information-type {
+    @include flex(space-between, initial);
+    color: red;
+    margin-bottom: 40px;
+}
+
+.information-type > div:hover {
+    cursor: pointer;
+}
+
+.active {
+    color: green;
+}
+
+.information-text {
+    background-color: rgba(160, 160, 160, 0.185);
+    padding: 20px;
+}
+
+/* Photos */
+
+.moscow-Photos-title {
+    padding-bottom: $standard-padding;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 200px;
+        background: orange;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 20px;
+    }
+}
+
+.moscow-In-Photos {
+    padding-top: $standard-padding;
+    box-sizing: border-box;
+}
+
+.inPhotos {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: $standard-padding;
+    box-sizing: border-box;
+}
+
+.image {
+    float: left;
+    width: 600px;
+    height: 448px;
+}
+
+.slider-box {
+    overflow: hidden;
+    width: 600px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.slider {
+    width: 6000px;
+}
+
+/* Testimonials */
+
+.testimonials-flex {
+    @include flex(space-between, initial);
+}
+
+.review {
+    font-size: 14px;
+    padding: 0 $standard-padding 10px $standard-padding;
+}
+
+.reviews {
+    padding: $standard-padding 0;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 200px;
+        background: orange;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 20px;
+    }
+}
+
+.test-photo {
+    height: 45px;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 12px;
+    color: black;
+}
+
+/* Statistics */
+
+.statistics {
+    padding: 0 $standard-padding $standard-padding $standard-padding;
+}
+
+.our-stats {
+    padding-bottom: $standard-padding;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 200px;
+        background: orange;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 20px;
+    }
+}
+
+.number-1 {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.number-2 {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.block-stat {
+    text-align: center;
+}
+
+.flex-stat {
+    @include flex(space-around, initial);
+    overflow: auto;
+}
+
+/* footer */
+
+footer {
+    padding: 20px 0 0 0;
+    max-width: 1000px;
+    background: rgb(21, 55, 65);
+    color: white;
+    font-size: 12px;
+    @include flex(space-between, flex-start);
+    box-sizing: border-box;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.invitation {
+    width: 33.33%;
+    color: silver;
+    text-align: left;
+    padding: 0 80px 20px $standard-padding;
+    line-height: 16px;
+    box-sizing: border-box;
+}
+
+.brand-logo {
+    @include flex(initial, center);
+}
+
+.contacts {
+    width: 33.33%;
+    text-align: left;
+    line-height: 24px;
+}
+
+.contacts-title {
+    font-size: 20px;
+}
+
+.address:before {
+    content: "\26F3";
+    color: yellow;
+    font-size: 20px;
+}
+
+.email:before {
+    content: "\2709   ";
+    color: yellow;
+    font-size: 20px;
+}
+
+.phone:before {
+    content: "\260E   ";
+    color: yellow;
+    font-size: 20px;
+}
+
+.news {
+    width: 33.33%;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 0 $standard-padding;
+    box-sizing: border-box;
+}
+
+.news-item {
+    font-size: 12px;
+    color: silver;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+/* Questions and Answers */
+
+.question {
+    padding: 0 $standard-padding;
+    font-size: 20px;
+    color: grey;
+}
+
+.answer {
+    padding: 15px $standard-padding;
+    display: none;
+    font-size: 14px;
+}
+
+.answer-button {
+    padding: 1% 5%;
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+}
+
+.QandA {
+    padding: $standard-padding 0 $standard-padding 0;
+}
+
+.QandA-title {
+    padding-bottom: $standard-padding;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 200px;
+        background: orange;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 20px;
+    }
+}
+
+/* underfooter */
+
+.underfooter {
+    width: 100%;
+    max-width: 1000px;
+    height: 40px;
+    padding: 3%;
+    background: rgb(8, 29, 34);
+    @include flex(space-between, center);
+    box-sizing: border-box;
+}
+
+.copyright {
+    width: 33.33%;
+    font-size: 12px;
+    color: silver;
+    box-sizing: border-box;
+}
+
+.madeby {
+    width: 33.33%;
+    font-size: 12px;
+    color: silver;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.social {
+    box-sizing: border-box;
+    text-align: right;
+    width: 33.33%;
+}
+
+.vk {
+    background: url(social/vk.png) center center / contain no-repeat;
+    padding: 10px;
+    margin-right: 3px;
+    box-sizing: border-box;
+}
+
+.facebook {
+    background: url(social/facebook.png) center center / contain no-repeat;
+    padding: 10px;
+    margin-right: 3px;
+    box-sizing: border-box;
+}
+
+.instagram {
+    background: url(social/instagram.png) center center / contain no-repeat;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.left-icons {
+    position: fixed;
+    left: 10px;
+    bottom: 10%;
+    z-index: 1000;
+}
+
+.left-icon-1 {
+    background: url(left-icons/info.svg) no-repeat;
+    padding: 15px;
+    display: block;
+    border-radius: 50%;
+    &:hover {
+        box-shadow: 5px 5px 10px rgb(56, 56, 56);
+    }
+}
+
+.left-icon-2 {
+    background: url(left-icons/pictures.svg) no-repeat;
+    padding: 15px;
+    margin-top: 10px;
+    display: block;
+    &:hover {
+        box-shadow: 5px 5px 10px rgb(56, 56, 56);
+    }
+}
+
+.left-icon-3 {
+    background: url(left-icons/question.svg) no-repeat;
+    padding: 15px;
+    margin-top: 10px;
+    display: block;
+    border-radius: 50%;
+    &:hover {
+        box-shadow: 5px 5px 10px rgb(56, 56, 56);
+    }
+}
+
+.left-icon-4 {
+    background: url(left-icons/email.svg) no-repeat;
+    padding: 15px;
+    margin-top: 10px;
+    display: block;
+    &:hover {
+        box-shadow: 5px 5px 10px rgb(56, 56, 56);
+    }
+}
+
+.contacts-page {
+    padding: $standard-padding;
+    box-sizing: border-box;
+    border-bottom: 5px solid rgb(255, 193, 85);
+}
+
+.contacts-page-title {
+    position: relative;
+    padding-bottom: $standard-padding;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 200px;
+        background: orange;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 20px;
+    }
+}
+
+.contacts-page-text {
+    color: rgb(6, 32, 51);
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.contacts-flex {
+    @include flex(space-between, initial);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.personnel {
+    @include flex(left, initial);
+    box-sizing: border-box;
+    width: 50%;
+    background: rgb(255, 193, 85);
+    font-size: 12px;
+}
+
+.personnel-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.personnel-profession {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.personnel > div {
+    padding-top: 5px;
+}
+
+.contacts-flex-address {
+    box-sizing: border-box;
+    width: 50%;
+    font-size: 16px;
+}
+
+.human {
+    width: 200px;
+    height: 150px;
+    margin-right: 15px;
+}
+
+.contacts-flex-icon-1 {
+    background: url(icons/placeholder.png) center center / contain no-repeat;
+    @include icons();
+}
+.contacts-flex-icon-2 {
+    background: url(icons/mail.png) center center / contain no-repeat;
+    @include icons();
+}
+
+.contacts-flex-icon-3 {
+    background: url(icons/telephone.png) center center / contain no-repeat;
+    @include icons();
+}
+
+form {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 22px;
+}
+
+[type="text"] {
+    height: 52px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+[type="text"], textarea {
+    border: 3px solid rgb(255, 193, 85);
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+[type="submit"] {
+    background: rgb(6, 32, 51);
+    outline: none;
+    width: 100%;
+    height: 56px;
+    color: white;
+    font-size: 22px;
+}
+
+.ajax {
+    color: green;
+}
+
+.contacts-flex-address > div {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+    nav {
+        display: none;
+        position: absolute;
+        width: 50%;
+        left: 48%;
+        top: 100%;
+        a {
+            display: block;
+            text-align: right;
+        }
+    }
+    .menu-button {
+        display: block;
+    }
+    .who-We-Are div {
+        width: 100%;
+    }
+    .who-We-Are-photo {
+        height: 400px;
+    }
+    footer > div:not(.underfooter) {
+        width: 50%;
+    }
+}
+@media (min-width: 761px) {
+    nav {
+        display: block !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .information-type {
+        flex-direction: column;
+    }
+    .underfooter {
+        flex-direction: column;
+        padding: 0;
+        div {
+            width: 100%;
+            background: rgb(8, 29, 34);
+            padding: 15px;
+            text-align: center;
+        }
+    }
+    .moscow-In-Photos {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    footer > div:not(.underfooter) {
+        width: 100%;
+    }
+    .contacts {
+        padding: 0 0 20px $standard-padding;
+    }
+    .testimonials-flex {
+        flex-direction: column;
+    }
+    .testimonials-flex > div {
+        padding-bottom: 20px;
+    }
+    .QandA {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 730px) {
+    .flex {
+        padding-bottom: 0;
+        .block {
+            width: 100%;
+            padding-bottom: 20px;
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+    .what-We-Offer {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .trip-type {
+        border-bottom: 3px solid red;
+    }
+    .trip-type > div {
+        width: 100%;
+    }
+    .moscow-city, .stalin-house, 
+    .bulgakov, .metro {
+        height: 500px;
+    }
+}
+
+@media (max-width: 935px) {
+    .personnel {
+        width: 100%;
+    }
+    .contacts-void {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .contacts-flex-address {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .contacts-flex:not(.contacts-form) {
+        display: none;
+    }
+}
+

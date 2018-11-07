@@ -1,0 +1,1142 @@
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes twinkling {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes falling {
+  50% {
+    left: 50%;
+    top: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    left: 12%;
+    top: 75%;
+    opacity: 0;
+  }
+}
+
+@keyframes falling {
+  50% {
+    left: 50%;
+    top: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    left: 12%;
+    top: 75%;
+    opacity: 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fdffe4;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blackStripe {
+  background: black;
+  height: 400px;
+}
+
+.trip-stripe {
+  background: #898d8e;
+  height: 400px;
+}
+
+.contacts-stripe {
+  background: -webkit-gradient(linear, left top, right top, from(#1a6481), to(#3c7388));
+  background: linear-gradient(to right, #1a6481, #3c7388);
+  background-color: black;
+  height: 400px;
+}
+
+header {
+  background: url(photos/nightmoscow.jpg) left top/cover no-repeat;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header::before {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 2px;
+  background-color: mintcream;
+  border-radius: 50%;
+  left: 18%;
+  top: 45%;
+  -webkit-animation: twinkling 2s ease infinite;
+          animation: twinkling 2s ease infinite;
+}
+
+header::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 2px;
+  background-color: mintcream;
+  border-radius: 50%;
+  left: 86%;
+  top: 20%;
+  -webkit-animation: falling 1.5s linear infinite;
+          animation: falling 1.5s linear infinite;
+}
+
+.trips {
+  background: url(photos/trips.jpg) left top/cover no-repeat;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-page-header {
+  background: url(photos/contacts.jpg) left top/cover no-repeat;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-center {
+  width: 50%;
+  position: absolute;
+  color: white;
+  left: 0;
+  right: 0;
+  top: 33%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+  opacity: 0.9;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  padding-bottom: 5px;
+}
+
+.mymoscow {
+  font-family: "Marck Script", cursive;
+  font-size: 36px;
+}
+
+.stripe {
+  width: 100%;
+  max-width: 1000px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.stripe-button {
+  display: block;
+  width: 140px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background: rgba(52, 95, 235, 0.521);
+  position: absolute;
+  bottom: 3%;
+  border-radius: 5px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav > a:hover {
+  color: #ffcb00;
+}
+
+.menu-button {
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  display: none;
+}
+
+.menu-button div {
+  background: white;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 6px;
+}
+
+.sliding-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(61, 60, 60, 0.404);
+}
+
+.vertical-menu-items {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.logo {
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 8px;
+}
+
+.brand {
+  color: #ffcb00;
+  font-family: "Marck Script", cursive;
+  font-size: 28px;
+}
+
+.brand-2 {
+  font-family: "Marck Script", cursive;
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
+  color: #6abff5;
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.what-We-Offer {
+  padding: 40px;
+}
+
+.offer {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 40px;
+  margin-top: 5px;
+}
+
+p {
+  font-size: 14px;
+  color: grey;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  padding-bottom: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.block {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.block:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.icon {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.who-We-Are,
+.trip-type {
+  background: #ffc013;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.who-We-Are-photo {
+  background: url(photos/group.jpg) center center/cover no-repeat;
+  width: 50%;
+}
+
+.moscow-city {
+  background: url(photos/moscow-city.jpg) center center/cover no-repeat;
+  width: 50%;
+}
+
+.stalin-house {
+  background: url(photos/stalin-house.jpg) 40% center/cover no-repeat;
+  width: 50%;
+}
+
+.bulgakov {
+  background: url(photos/bulgakov.jpg) center center/cover no-repeat;
+  width: 50%;
+}
+
+.metro {
+  background: url(photos/metro.jpg) center center/cover no-repeat;
+  width: 50%;
+}
+
+.content {
+  color: white;
+  width: 50%;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40px;
+}
+
+.content-title {
+  margin-bottom: 20px;
+  color: white;
+  text-align: left;
+  line-height: 20px;
+}
+
+.price {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.button {
+  background: #ffa600;
+  border: 4px groove #ffa600;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  border-style: inset;
+}
+
+.button-right-align {
+  text-align: right;
+}
+
+/* Information block */
+.information {
+  padding: 40px 40px 0 40px;
+}
+
+.information-title {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.information-title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  background: orange;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+}
+
+.information-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  color: red;
+  margin-bottom: 40px;
+}
+
+.information-type > div:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: green;
+}
+
+.information-text {
+  background-color: rgba(160, 160, 160, 0.185);
+  padding: 20px;
+}
+
+/* Photos */
+.moscow-Photos-title {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.moscow-Photos-title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  background: orange;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+}
+
+.moscow-In-Photos {
+  padding-top: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.inPhotos {
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.image {
+  float: left;
+  width: 600px;
+  height: 448px;
+}
+
+.slider-box {
+  overflow: hidden;
+  width: 600px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 6000px;
+}
+
+/* Testimonials */
+.testimonials-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.review {
+  font-size: 14px;
+  padding: 0 40px 10px 40px;
+}
+
+.reviews {
+  padding: 40px 0;
+  position: relative;
+}
+
+.reviews::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  background: orange;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+}
+
+.test-photo {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 12px;
+  color: black;
+}
+
+/* Statistics */
+.statistics {
+  padding: 0 40px 40px 40px;
+}
+
+.our-stats {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.our-stats::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  background: orange;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+}
+
+.number-1 {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+}
+
+.number-2 {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+}
+
+.block-stat {
+  text-align: center;
+}
+
+.flex-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  overflow: auto;
+}
+
+/* footer */
+footer {
+  padding: 20px 0 0 0;
+  max-width: 1000px;
+  background: #153741;
+  color: white;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.invitation {
+  width: 33.33%;
+  color: silver;
+  text-align: left;
+  padding: 0 80px 20px 40px;
+  line-height: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.brand-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts {
+  width: 33.33%;
+  text-align: left;
+  line-height: 24px;
+}
+
+.contacts-title {
+  font-size: 20px;
+}
+
+.address:before {
+  content: "\26F3";
+  color: yellow;
+  font-size: 20px;
+}
+
+.email:before {
+  content: "\2709   ";
+  color: yellow;
+  font-size: 20px;
+}
+
+.phone:before {
+  content: "\260E   ";
+  color: yellow;
+  font-size: 20px;
+}
+
+.news {
+  width: 33.33%;
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.news-item {
+  font-size: 12px;
+  color: silver;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+/* Questions and Answers */
+.question {
+  padding: 0 40px;
+  font-size: 20px;
+  color: grey;
+}
+
+.answer {
+  padding: 15px 40px;
+  display: none;
+  font-size: 14px;
+}
+
+.answer-button {
+  padding: 1% 5%;
+  font-size: 14px;
+  color: green;
+  font-weight: bold;
+}
+
+.QandA {
+  padding: 40px 0 40px 0;
+}
+
+.QandA-title {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.QandA-title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  background: orange;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+}
+
+/* underfooter */
+.underfooter {
+  width: 100%;
+  max-width: 1000px;
+  height: 40px;
+  padding: 3%;
+  background: #081d22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.copyright {
+  width: 33.33%;
+  font-size: 12px;
+  color: silver;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.madeby {
+  width: 33.33%;
+  font-size: 12px;
+  color: silver;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.social {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: right;
+  width: 33.33%;
+}
+
+.vk {
+  background: url(social/vk.png) center center/contain no-repeat;
+  padding: 10px;
+  margin-right: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.facebook {
+  background: url(social/facebook.png) center center/contain no-repeat;
+  padding: 10px;
+  margin-right: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.instagram {
+  background: url(social/instagram.png) center center/contain no-repeat;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.left-icons {
+  position: fixed;
+  left: 10px;
+  bottom: 10%;
+  z-index: 1000;
+}
+
+.left-icon-1 {
+  background: url(left-icons/info.svg) no-repeat;
+  padding: 15px;
+  display: block;
+  border-radius: 50%;
+}
+
+.left-icon-1:hover {
+  -webkit-box-shadow: 5px 5px 10px #383838;
+          box-shadow: 5px 5px 10px #383838;
+}
+
+.left-icon-2 {
+  background: url(left-icons/pictures.svg) no-repeat;
+  padding: 15px;
+  margin-top: 10px;
+  display: block;
+}
+
+.left-icon-2:hover {
+  -webkit-box-shadow: 5px 5px 10px #383838;
+          box-shadow: 5px 5px 10px #383838;
+}
+
+.left-icon-3 {
+  background: url(left-icons/question.svg) no-repeat;
+  padding: 15px;
+  margin-top: 10px;
+  display: block;
+  border-radius: 50%;
+}
+
+.left-icon-3:hover {
+  -webkit-box-shadow: 5px 5px 10px #383838;
+          box-shadow: 5px 5px 10px #383838;
+}
+
+.left-icon-4 {
+  background: url(left-icons/email.svg) no-repeat;
+  padding: 15px;
+  margin-top: 10px;
+  display: block;
+}
+
+.left-icon-4:hover {
+  -webkit-box-shadow: 5px 5px 10px #383838;
+          box-shadow: 5px 5px 10px #383838;
+}
+
+.contacts-page {
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 5px solid #ffc155;
+}
+
+.contacts-page-title {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.contacts-page-title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  background: orange;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+}
+
+.contacts-page-text {
+  color: #062033;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.contacts-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  margin-bottom: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.personnel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  background: #ffc155;
+  font-size: 12px;
+}
+
+.personnel-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.personnel-profession {
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.personnel > div {
+  padding-top: 5px;
+}
+
+.contacts-flex-address {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  font-size: 16px;
+}
+
+.human {
+  width: 200px;
+  height: 150px;
+  margin-right: 15px;
+}
+
+.contacts-flex-icon-1 {
+  background: url(icons/placeholder.png) center center/contain no-repeat;
+  padding: 23px;
+  float: left;
+  margin-right: 20px;
+}
+
+.contacts-flex-icon-2 {
+  background: url(icons/mail.png) center center/contain no-repeat;
+  padding: 23px;
+  float: left;
+  margin-right: 20px;
+}
+
+.contacts-flex-icon-3 {
+  background: url(icons/telephone.png) center center/contain no-repeat;
+  padding: 23px;
+  float: left;
+  margin-right: 20px;
+}
+
+form {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 22px;
+}
+
+[type="text"] {
+  height: 52px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+[type="text"], textarea {
+  border: 3px solid #ffc155;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px;
+  font-size: 22px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+[type="submit"] {
+  background: #062033;
+  outline: none;
+  width: 100%;
+  height: 56px;
+  color: white;
+  font-size: 22px;
+}
+
+.ajax {
+  color: green;
+}
+
+.contacts-flex-address > div {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+  nav {
+    display: none;
+    position: absolute;
+    width: 50%;
+    left: 48%;
+    top: 100%;
+  }
+  nav a {
+    display: block;
+    text-align: right;
+  }
+  .menu-button {
+    display: block;
+  }
+  .who-We-Are div {
+    width: 100%;
+  }
+  .who-We-Are-photo {
+    height: 400px;
+  }
+  footer > div:not(.underfooter) {
+    width: 50%;
+  }
+}
+
+@media (min-width: 761px) {
+  nav {
+    display: block !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .information-type {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .underfooter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .underfooter div {
+    width: 100%;
+    background: #081d22;
+    padding: 15px;
+    text-align: center;
+  }
+  .moscow-In-Photos {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  footer > div:not(.underfooter) {
+    width: 100%;
+  }
+  .contacts {
+    padding: 0 0 20px 40px;
+  }
+  .testimonials-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonials-flex > div {
+    padding-bottom: 20px;
+  }
+  .QandA {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 730px) {
+  .flex {
+    padding-bottom: 0;
+  }
+  .flex .block {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .flex .block:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .what-We-Offer {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .trip-type {
+    border-bottom: 3px solid red;
+  }
+  .trip-type > div {
+    width: 100%;
+  }
+  .moscow-city, .stalin-house,
+  .bulgakov, .metro {
+    height: 500px;
+  }
+}
+
+@media (max-width: 935px) {
+  .personnel {
+    width: 100%;
+  }
+  .contacts-void {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts-flex-address {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .contacts-flex:not(.contacts-form) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

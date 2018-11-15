@@ -83,7 +83,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['login'])) {
                         $is_read_check = "SELECT login, message FROM is_read WHERE login='$login' AND message='$message_content'";
                         $is_read_check_assoc = mysqli_fetch_assoc(mysqli_query($link, $is_read_check));
                         $sign_color = ($is_read_check_assoc == NULL) ? "bg-danger" : "bg-success";
-                        $message_card = "<div class=\"card mb-2\">" . "<h5 class=\"card-header d-flex align-items-center\"><div class=\"sign $sign_color\"></div>Сообщение №" .
+                        $message_card = "<div class=\"card mb-2\">" . "<h5 class=\"card-header d-flex align-items-center\"><div class=\"sign badge $sign_color\"> </div>Сообщение №" .
                                         "$message_index от: " . "$email ($name)" . "</h5><div class=\"card-body bg-milky\"><p class=\"card-text\">" . 
                                         "$message_content" . "</p></div><div class=\"card-footer text-muted text-center\">" . "$date_created" .
                                         "</div></div>";
